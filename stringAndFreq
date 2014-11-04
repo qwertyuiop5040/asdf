@@ -1,0 +1,48 @@
+
+public class StringAndFreq implements Comparable<StringAndFreq> {
+
+	String s= "Problem!!!!";
+	int freq=-1;
+	static int compareType = 1; // 1=alpha, 2=freq, 3 = length
+	
+	public StringAndFreq(String str) {
+		this(str,1);
+	}
+	public String getString() {
+		return s;
+	}
+	public int getFreq() {
+		return freq;
+	}
+	public StringAndFreq(String str, int i) {
+		s = str;
+		freq = i;
+
+	}
+
+
+	@Override
+	public int compareTo(StringAndFreq input) {
+		// according to freq
+		if(compareType == 2)
+			return this.getFreq() - input.getFreq();
+		if(compareType == 3)	
+			return this.getString().length()-input.getString().length();
+		
+		return this.getString().compareTo(input.getString());
+	}
+
+
+	public void increment() {
+		freq++;
+	}
+
+
+	public void compareFreq() {
+		compareType = 2;
+	}
+	@Override
+	public String toString() {
+		return s + "\t"+freq;
+	}
+}
