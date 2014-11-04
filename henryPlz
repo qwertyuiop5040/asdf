@@ -1,1 +1,21 @@
-asdasd
+public class Stuff implements List<String>{
+	String a[];
+	int size=10;
+	int on=0;
+	public Stuff(){
+		a=new String[size];
+		
+	}
+	@Override
+	public boolean add(String arg0) {
+		a[on]=arg0;
+		if(++on>=size)doubleSize();
+		return false;
+	}
+	private void doubleSize(){
+		String c[]=new String[size*2+1];
+		for(int i=0;i<a.length;i++){
+			c[i]=a[i];
+		}
+		a=c;
+	}
