@@ -1,0 +1,48 @@
+
+public class Driver {
+
+	public static void main(String[] args) {
+		new Driver().start();
+
+	}
+
+	private WordList words;
+
+	private void start() {
+		readAndLoad();// prompt user for file, read and add
+					  // to the List
+		sortFreq();
+		printList();
+		sortAlpha();
+		printList();
+		sortLength();
+		printList();
+		
+	}
+
+	private void sortLength() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void sortAlpha() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void printList() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void sortFreq() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void readAndLoad() {
+		words = new WordList();
+		
+	}
+
+}
